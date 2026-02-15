@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <title>Pixel Mood</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">🕹️</span>
+      <div>
+        <div class="title">Pixel Mood</div>
+        <div class="subtitle">8-bit reaction portraits</div>
+      </div>
+    </div>
+    <button id="installBtn" class="btn ghost" type="button" hidden>Install</button>
+  </header>
+
+  <main class="wrap">
+    <section class="card" id="setupCard">
+      <div class="cardHeader">
+        <h2>Setup</h2>
+        <p>Take or upload one photo per mood. We’ll convert them into 8-bit portraits.</p>
+      </div>
+
+      <div class="grid" id="setupGrid"></div>
+
+      <div class="row">
+        <button class="btn" id="resetBtn" type="button">Reset All</button>
+        <button class="btn primary" id="goComposeBtn" type="button" disabled>Go to Compose</button>
+      </div>
+
+      <div class="smallNote">
+        Tip: use good lighting and keep your face centered. It’ll look extra “RPG” if your expression is clear.
+      </div>
+    </section>
+
+    <section class="card" id="composeCard" hidden>
+      <div class="cardHeader">
+        <h2>Compose</h2>
+        <p>Pick a mood, type text, export a shareable RPG-style image.</p>
+      </div>
+
+      <div class="composeControls">
+        <label class="label">Mood</label>
+        <div class="moods" id="moodPicker"></div>
+
+        <label class="label" for="msg">Text</label>
+        <textarea id="msg" rows="3" maxlength="140" placeholder="Type your message…"></textarea>
+
+        <div class="row">
+          <button class="btn" id="backToSetupBtn" type="button">Back</button>
+          <button class="btn primary" id="renderBtn" type="button">Generate</button>
+        </div>
+      </div>
+
+      <div class="previewWrap">
+        <canvas id="outCanvas" width="720" height="720" aria-label="Output preview"></canvas>
+        <div class="row">
+          <button class="btn" id="downloadBtn" type="button" disabled>Download PNG</button>
+          <button class="btn" id="shareBtn" type="button" disabled>Share</button>
+        </div>
+        <div class="smallNote">
+          Output is a PNG so it works great in Messenger/Discord/Instagram DMs.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Made for quick reactions. Runs locally. No account.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
