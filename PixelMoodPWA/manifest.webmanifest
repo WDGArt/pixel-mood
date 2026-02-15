@@ -1,0 +1,15 @@
+{
+  "name": "Pixel Mood",
+  "short_name": "PixelMood",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0b0b",
+  "theme_color": "#0b0b0b",
+  "icons": [
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAABAfUpiAAAABmJLR0QA/wD/AP+gvaeTAAAAkklEQVRIie2WwQ2AIAxFJw2kB8kH0kH0kH0kH0g5m1aQqk5m0mQw2g0vKkqf0bJb6nYbqQHqfQ1wQk0qgR0xk0mXQm8gqgq5mQy3oK8nQ3q3lq4p9n1Qq8o2j7Gg5h3k0Z9hZQGxgNfQjVQe8wAAAABJRU5ErkJggg==",
+      "sizes": "64x16",
+      "type": "image/png"
+    }
+  ]
+}
