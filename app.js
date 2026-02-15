@@ -277,7 +277,7 @@ function makePixelPortraitDataURL(img, outSize, quickPreview) {
   const sy = Math.floor((img.height - size) / 2);
 
   // Downscale size (lower = chunkier pixels)
-  const pixelScale = quickPreview ? 44 : 56; // tweak these for chunkiness
+  const pixelScale = quickPreview ? 120 : 120; // tweak these for chunkiness
   const small = Math.max(24, Math.floor(outSize * (pixelScale / 240)));
 
   const c1 = document.createElement("canvas");
@@ -605,3 +605,4 @@ async function registerSW() {
     // ignore (local file:// won’t work with SW)
   }
 }
+
